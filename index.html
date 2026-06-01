@@ -88,6 +88,14 @@
     .cta p{opacity:.8;margin-bottom:26px}
     footer{background:#0c0c0c;color:#8b8f96;text-align:center;padding:32px 20px;font-size:.85rem}
 
+    /* Instagram 投稿サムネイル（正方形グリッド） */
+    .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:680px;margin:0 auto 24px}
+    .ig-thumb{position:relative;display:block;aspect-ratio:1/1;border-radius:10px;overflow:hidden;
+      background:linear-gradient(135deg,#e9edf2,#cdd5de)}
+    .ig-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+    .ig-thumb:hover img{transform:scale(1.06)}
+    @media(max-width:480px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+
     /* Instagram 導線カード（公式風グラデーション） */
     .ig-card{display:flex;align-items:center;gap:20px;max-width:680px;margin:0 auto;
       background:var(--card);border:1px solid #eaecef;border-radius:16px;padding:22px 26px;
@@ -176,6 +184,15 @@
   <section class="block" id="instagram" style="background:#fff">
     <div class="wrap">
       <div class="sec-ttl"><span>INSTAGRAM</span><h2>公式インスタグラム</h2></div>
+      <!-- 投稿サムネイル：取得時点の最新6件のスナップショット（images/insta1〜6.jpg）。各画像はその投稿へリンク -->
+      <div class="ig-grid">
+        <a class="ig-thumb" href="https://www.instagram.com/p/C9oz4_bSBBJ/" target="_blank" rel="noopener"><img src="images/insta1.jpg" alt="Instagram投稿1" loading="lazy"></a>
+        <a class="ig-thumb" href="https://www.instagram.com/p/C9ZcU62yiGW/" target="_blank" rel="noopener"><img src="images/insta2.jpg" alt="Instagram投稿2" loading="lazy"></a>
+        <a class="ig-thumb" href="https://www.instagram.com/p/C9PK3DYyB4R/" target="_blank" rel="noopener"><img src="images/insta3.jpg" alt="Instagram投稿3" loading="lazy"></a>
+        <a class="ig-thumb" href="https://www.instagram.com/p/C9CRqWYS3F2/" target="_blank" rel="noopener"><img src="images/insta4.jpg" alt="Instagram投稿4" loading="lazy"></a>
+        <a class="ig-thumb" href="https://www.instagram.com/p/C8yzi0kStPC/" target="_blank" rel="noopener"><img src="images/insta5.jpg" alt="Instagram投稿5" loading="lazy"></a>
+        <a class="ig-thumb" href="https://www.instagram.com/p/C8wSZp8ygG_/" target="_blank" rel="noopener"><img src="images/insta6.jpg" alt="Instagram投稿6" loading="lazy"></a>
+      </div>
       <a class="ig-card" href="https://www.instagram.com/daimaru_sougou/" target="_blank" rel="noopener">
         <div class="ig-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
