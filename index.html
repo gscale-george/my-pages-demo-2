@@ -87,6 +87,21 @@
     .cta h2{font-size:clamp(1.4rem,4vw,2rem);margin-bottom:10px}
     .cta p{opacity:.8;margin-bottom:26px}
     footer{background:#0c0c0c;color:#8b8f96;text-align:center;padding:32px 20px;font-size:.85rem}
+
+    /* Instagram 導線カード（公式風グラデーション） */
+    .ig-card{display:flex;align-items:center;gap:20px;max-width:680px;margin:0 auto;
+      background:var(--card);border:1px solid #eaecef;border-radius:16px;padding:22px 26px;
+      text-decoration:none;color:var(--ink);box-shadow:0 6px 20px rgba(0,0,0,.07);
+      transition:transform .18s,box-shadow .18s}
+    .ig-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.13)}
+    .ig-icon{flex:none;width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888)}
+    .ig-text{flex:1;min-width:0}
+    .ig-handle{font-weight:800;font-size:1.1rem}
+    .ig-lead{color:var(--muted);font-size:.9rem;margin-top:2px}
+    .ig-btn{flex:none;font-weight:700;color:#fff;white-space:nowrap;padding:11px 22px;border-radius:8px;
+      background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888)}
+    @media(max-width:640px){.ig-card{flex-direction:column;text-align:center}}
   </style>
 </head>
 <body>
@@ -99,6 +114,7 @@
         <a href="#works">分譲・物件</a>
         <a href="#event">イベント</a>
         <a href="#column">コラム</a>
+        <a href="#instagram">Instagram</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
     </div>
@@ -153,6 +169,25 @@
         <div class="card"><img class="ph" src="https://daimaru-d.github.io/pages-demo-assets/images/event.jpg" alt="コラム"><div class="body"><h3>戸建てとマンションの選び方</h3><div class="meta">判断基準を整理</div></div></div>
         <div class="card"><img class="ph" src="https://daimaru-d.github.io/pages-demo-assets/images/hero.jpg" alt="コラム"><div class="body"><h3>2026年 岐阜県 地価ランキング</h3><div class="meta">公示地価の推移も紹介</div></div></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Instagram：静的サイトはトークン無しでフィードを引けないため、確実に表示される導線カードにする -->
+  <section class="block" id="instagram" style="background:#fff">
+    <div class="wrap">
+      <div class="sec-ttl"><span>INSTAGRAM</span><h2>公式インスタグラム</h2></div>
+      <a class="ig-card" href="https://www.instagram.com/daimaru_sougou/" target="_blank" rel="noopener">
+        <div class="ig-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/>
+          </svg>
+        </div>
+        <div class="ig-text">
+          <div class="ig-handle">@daimaru_sougou</div>
+          <div class="ig-lead">最新の物件・イベント・施工事例を写真で発信中。タップしてフォロー！</div>
+        </div>
+        <span class="ig-btn">Instagramで見る</span>
+      </a>
     </div>
   </section>
 
